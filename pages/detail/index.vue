@@ -34,7 +34,7 @@
     <view class="footer">
       <view class="actions">
         <view class="action-item" @click="handleLike">
-          <uni-icons type="hand-up" size="24" :color="isLiked ? '#2979ff' : '#666'"></uni-icons>
+		  <uni-icons type="hand-up" size="24" :color="isLiked ? '#2979ff' : '#666'"></uni-icons>
           <text>点赞 {{ interview.likes }}</text>
         </view>
         <view class="action-item">
