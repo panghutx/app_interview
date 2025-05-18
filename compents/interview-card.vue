@@ -3,7 +3,7 @@
     <view class="title">{{ data.title }}</view>
     <view class="meta">
       <text class="author">{{ data.author }}</text>
-      <text class="time">{{ formatTime(data.published_at) }}</text>
+      <text class="t ime">{{ formatTime(data.published_at) }}</text>
     </view>
     <view class="tags">
       <tag v-for="tag in data.tags.split(',')" :key="tag" :text="tag.trim()" />

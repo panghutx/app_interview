@@ -1,3 +1,5 @@
+import { METHODS } from "http"
+
 let requestCount = 0
 
 const request = (options) => {
@@ -7,12 +9,13 @@ const request = (options) => {
   return new Promise((resolve, reject) => {
 	  console.log("底层request",options)
     uni.request({
-      url: 'http://127.0.0.1:8000' + options.url,
-      method: 'GET',
+      // url: 'http://127.0.0.1:8000' + options.url,
+      url: 'https://interview.youngsay.cn' + options.url,
       data: options.data || {},
+      method : options.method || 'POST',
       header: {
 		// 'Origin': 'http://localhost:8080',  // 显式声明
-		'X-Requested-With': 'XMLHttpRequest',
+		    'X-Requested-With': 'XMLHttpRequest',
         'Content-Type': 'application/json',
         'X-Token': uni.getStorageSync('token') || '',
         ...options.header
